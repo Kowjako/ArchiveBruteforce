@@ -37,7 +37,7 @@ namespace ArchiveBrutforce
 
         private void dropPanel_Drop(object sender, DragEventArgs e)
         {
-
+            Uploader.upload(((string[])e.Data.GetData(DataFormats.FileDrop))[0]);
         }
     }
 }
