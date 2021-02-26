@@ -60,7 +60,7 @@
                     <TextBlock Margin="4" FontWeight="DemiBold" Text="Czas pracy"/>
                     <TextBlock Foreground="Green" FontWeight="Bold" HorizontalAlignment="Right" Margin="4" Text="0:00:00"/>
                 </DockPanel>
-                <Button Height="30" Margin="2" Content="Start Bruteforce">
+                <Button Height="30" Margin="2" Content="Start Bruteforce" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="15" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}">

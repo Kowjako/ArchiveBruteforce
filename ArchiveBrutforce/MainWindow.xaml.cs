@@ -39,5 +39,10 @@ namespace ArchiveBrutforce
         {
             Uploader.upload(((string[])e.Data.GetData(DataFormats.FileDrop))[0]);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BruteForce.Brute();
+        }
     }
 }
