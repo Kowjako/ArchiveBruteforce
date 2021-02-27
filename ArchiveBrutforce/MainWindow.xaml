@@ -52,13 +52,13 @@
             <StackPanel Grid.Row="2">
                 <StackPanel HorizontalAlignment="Center" Width="180">
                     <TextBlock Margin="2" Text="Sprawdzone opcje" TextAlignment="Center" FontWeight="DemiBold"/>
-                    <TextBlock Margin="2" DockPanel.Dock="Bottom" TextAlignment="Center" Foreground="Firebrick" FontWeight="Heavy" Text="0"/>
+                    <TextBlock x:Name="passCounter" Margin="2" DockPanel.Dock="Bottom" TextAlignment="Center" Foreground="Firebrick" FontWeight="Heavy" Text="0"/>
                     <Border BorderBrush="Black" BorderThickness="0.5"/>
                 </StackPanel>
                 <DockPanel>
                     <Border DockPanel.Dock="Bottom" BorderBrush="Black" BorderThickness="0.5"/>
                     <TextBlock Margin="4" FontWeight="DemiBold" Text="Czas pracy"/>
-                    <TextBlock Foreground="Green" FontWeight="Bold" HorizontalAlignment="Right" Margin="4" Text="0:00:00"/>
+                    <TextBlock x:Name="timeLabel" Foreground="Green" FontWeight="Bold" HorizontalAlignment="Right" Margin="4" Text="0:00:00"/>
                 </DockPanel>
                 <Button Height="30" Margin="2" Content="Start Bruteforce" Click="Button_Click">
                     <Button.Template>
