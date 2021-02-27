@@ -24,7 +24,6 @@ namespace ArchiveBrutforce
     {
         DateTime now;
         TimeSpan estimatedTime;
-        public bool isPasswordCracked = false;
 
         public MainWindow()
         {
@@ -57,7 +56,7 @@ namespace ArchiveBrutforce
 
         private void UpdateEstimatedTime()
         {
-            while(!isPasswordCracked)
+            while(!BruteForce.isMatched)
             {
                 estimatedTime = DateTime.Now.Subtract(now);
                 this.Dispatcher.Invoke(() => timeLabel.Text = string.Format("{0:D1}:{1:D2}:{2:D2}", estimatedTime.Hours, estimatedTime.Minutes, estimatedTime.Seconds));

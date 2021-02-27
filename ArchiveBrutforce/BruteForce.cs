@@ -14,10 +14,9 @@ namespace ArchiveBrutforce
         static MainWindow Window;
 
         private static string pass = null;
-        private static bool isMatched = false;
+        public static bool isMatched = false;
         private static long computedKeys = 0;
         private static int charactersToTestLength = 0;
-        private static string brutedPassword = null;
 
         static ZipFile archive = new ZipFile(Uploader.Path);
 
@@ -104,9 +103,7 @@ namespace ArchiveBrutforce
                         if(!isMatched)
                         {
                             isMatched = true;
-                            brutedPassword = new string(keyChars);
-                            MessageBox.Show($"Password is {brutedPassword}");
-                            Window.isPasswordCracked = true;
+                            MessageBox.Show($"Password is {new string(keyChars)}");
                         }
                         return;
                     }
